@@ -1,6 +1,6 @@
-from audioop import add
 from flask import Flask, request
 from flask_cors import CORS
+import humps
 
 from mocks import SUPPORTED_EXCHANGES, MOCK_BALANCES_RESPONSE, MOCK_LOGIN_RESPONSE, MOCK_TRANSFER_RESPONSE
 
@@ -25,7 +25,7 @@ def login():
   print(exchange_api, username, password)
 
   # send request to API
-  return MOCK_LOGIN_RESPONSE
+  return humps.camelize(MOCK_LOGIN_RESPONSE)
 
 @app.route("/api/v1/balances", methods=['GET'])
 def balances():
@@ -33,7 +33,7 @@ def balances():
   user_id = args.get("user_id")
 
   if(user_id):
-    return MOCK_BALANCES_RESPONSE
+    return humps.camelize(MOCK_BALANCES_RESPONSE)
 
 @app.route("/api/v1/transfer", methods=['POST'])
 def transfer():
@@ -46,8 +46,7 @@ def transfer():
 
   print(account_id, source_currency, destination_currency, source_amount, address)
 
-  return MOCK_TRANSFER_RESPONSE
-
+  return humps.camelize(MOCK_TRANSFER_RESPONSE)
 
 if __name__ == '__main__':
   app.run(debug=True, host='0.0.0.0', port=8000)

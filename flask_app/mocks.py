@@ -19,7 +19,7 @@ MOCK_TRANSFER_PARAMS = {
   "source_currency": "CAD",
   "destination_currency": "ETH",
   "source_amount": 100,
-  "address": "abcde"
+  "destination_address": "abcde"
 }
 
 # mock responses
