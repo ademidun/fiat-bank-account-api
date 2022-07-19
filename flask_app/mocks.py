@@ -22,10 +22,10 @@ MOCK_TRANSFER_PARAMS = {
 
 # mock responses
 
-MOCK_ACCOUNT_DATA = {
+MOCK_ASSET_DATA = {
   "account_id": "non-registered-crypto-123",
-  "currency": "CAD",
-  "balance": 100,
+  "currency_symbol": "CAD",
+  "amount": 100,
   "label": "crypto"
 }
 
@@ -35,7 +35,7 @@ MOCK_LOGIN_RESPONSE = {
 }
 
 MOCK_BALANCES_RESPONSE = {
-  "accounts": [MOCK_ACCOUNT_DATA]
+  "assets": [MOCK_ASSET_DATA]
 }
 
 MOCK_TRANSFER_RESPONSE = {
