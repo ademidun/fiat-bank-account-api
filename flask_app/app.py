@@ -5,9 +5,7 @@ import humps
 from mocks import MOCK_BALANCES_RESPONSE, MOCK_LOGIN_RESPONSE, MOCK_TRANSFER_RESPONSE
 
 app = Flask(__name__)
-CORS(app) # supports_credentials=True
-
-# another method/route to get exchanges we support
+CORS(app) # supports_credentials=True?
 
 @app.route("/")
 def home():
