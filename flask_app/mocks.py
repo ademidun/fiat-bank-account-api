@@ -14,6 +14,8 @@ MOCK_TRANSFER_PARAMS = {
   "account_id": "non-registered-crypto-123",
   "source_currency": "CAD",
   "destination_currency": "ETH",
+  "chain_id": 1,
+  "token_address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", #0xEe is the placeholder for the native currency of a respective blockchain. https://github.com/DePayFi/widgets/issues/57#issuecomment-1166229695
   "source_amount": 100,
   "destination_address": "abcde"
 }

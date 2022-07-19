@@ -39,11 +39,14 @@ def transfer():
   args = request.args
   account_id = args.get("account_id")
   source_currency = args.get("source_currency")
-  destination_currency = args.get("destination_currency")
   source_amount = args.get("source_amount")
   address = args.get("address")
+  # For EVMs
+  destination_currency = args.get("destination_currency")
+  chain_id = args.get("chain_id")
+  token_address = args.get("token_address")
 
-  print(account_id, source_currency, destination_currency, source_amount, address)
+  print(account_id, source_currency, destination_currency, chain_id, token_address, source_amount, address)
 
   return humps.camelize(MOCK_TRANSFER_RESPONSE)
 
