@@ -1,7 +1,3 @@
-SUPPORTED_EXCHANGES = {
-  "Wealthsimple": "ws-crypto-api"
-}
-
 # mock params
 
 MOCK_LOGIN_PARAM = {

@@ -2,7 +2,7 @@ from flask import Flask, request
 from flask_cors import CORS
 import humps
 
-from mocks import SUPPORTED_EXCHANGES, MOCK_BALANCES_RESPONSE, MOCK_LOGIN_RESPONSE, MOCK_TRANSFER_RESPONSE
+from mocks import MOCK_BALANCES_RESPONSE, MOCK_LOGIN_RESPONSE, MOCK_TRANSFER_RESPONSE
 
 app = Flask(__name__)
 CORS(app) # supports_credentials=True
@@ -17,10 +17,9 @@ def home():
 # log into the crypto exchange service
 def login():
   args = request.args
-  exchange = args.get("exchange")
+  exchange_api = args.get("exchange_api")
   username = args.get("username")
   password = args.get("password")
-  exchange_api = SUPPORTED_EXCHANGES[exchange]
 
   print(exchange_api, username, password)
 
