@@ -25,7 +25,7 @@ MOCK_TRANSFER_PARAMS = {
 MOCK_ASSET_DATA = {
   "account_id": "non-registered-crypto-123",
   "currency_symbol": "CAD",
-  "amount": 100,
+  "amount": 150,
   "label": "crypto"
 }
 
