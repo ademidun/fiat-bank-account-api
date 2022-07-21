@@ -1,2 +1,6 @@
 venv/
 *.pyc
+node_modules/
+dist
+.secrets
+.privateKey
